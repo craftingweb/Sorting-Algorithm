@@ -28,6 +28,10 @@ class Node {
     //while not at the end, or 1 cycle has completed
     while((fast !== null && fast.next !== null) || (fast === slow))
     {
+        //updating pointers
+        slow = slow.next;
+        fast = fast.next.next;
+        
         i = 1; 
         i++; 
 
@@ -40,9 +44,7 @@ class Node {
             
         }
 
-    //updating pointers
-    slow = slow.next;
-    fast = fast.next.next;
+    
     }
 
     return nums.length; 
