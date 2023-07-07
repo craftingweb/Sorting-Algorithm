@@ -43,5 +43,5 @@ class Node {
     fast = fast.next.next;
     }
 
-    return nums; 
+    return nums.length; 
   }
