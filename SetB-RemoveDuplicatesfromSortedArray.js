@@ -28,13 +28,15 @@ class Node {
     //while not at the end, or 1 cycle has completed
     while((fast !== null && fast.next !== null) || (fast === slow))
     {
+        i = 1; 
+        i++; 
 
         //fast should be equal to slow + 2 ,, if its not then there is a duplicate
-        if(fast.value != (slow.value + 2))
+        if(fast.value != (slow.value + i))
         {
             //we want to remove the duplicate
             //remove inbetween fast and slow and move on 
-            nums = nums.splice((slow.value), 1);
+            nums = nums.splice((fast.value - 1), 1);
             
         }
 
