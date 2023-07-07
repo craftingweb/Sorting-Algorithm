@@ -4,6 +4,7 @@
 
 //sorted in non decreasing order
 // sorting in place,, same relative order
+//directly changing array nums 
 //returning number of unique elements
 //large dataset, starts at -100
 
@@ -23,12 +24,23 @@ class Node {
     let fast = head;
     let slow = head; 
 
-    //fast should be equal to slow + 2 ,, if its not then there is a duplicate
-    while(fast.value === (slow.value + 2))
+    //while not at the end, or 1 cycle has completed
+    while(fast !== null && fast.next !== null)
     {
-        
+
+        //fast should be equal to slow + 2 ,, if its not then there is a duplicate
+        if(fast.value != (slow.value + 2))
+        {
+            //we want to remove the duplicate
+            //remove inbetween fast and slow and move on 
+            nums = nums.splice((slow.value), 1);
+            
+        }
+
+    //updating pointers
+    slow = slow.next;
+    fast = fast.next.next;
     }
 
-
-
+    return nums; 
   }
