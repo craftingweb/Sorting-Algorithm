@@ -18,6 +18,7 @@ class Node {
     }
   }
 
+
   function RemoveDuplicates(nums)
   {
     //setting our pointers to the start of array 
@@ -25,7 +26,7 @@ class Node {
     let slow = head; 
 
     //while not at the end, or 1 cycle has completed
-    while(fast !== null && fast.next !== null)
+    while((fast !== null && fast.next !== null) || (fast === slow))
     {
 
         //fast should be equal to slow + 2 ,, if its not then there is a duplicate
