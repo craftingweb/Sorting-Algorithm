@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/VitaliPri/Sorting-Algorithm#readme",
   "devDependencies": {
+    "jes": "^0.6.1",
     "jest": "^29.6.1"
   }
 }
