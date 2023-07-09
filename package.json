@@ -1,14 +1,22 @@
 {
-  "name": "sortassign",
+  "name": "sort",
   "version": "1.0.0",
   "description": "For this assignment you will be working in pairs. We are simply practicing our algorithmic problem solving with various javascript problems that are efficiently solved using the algorithmic frameworks discussed in class today.",
   "main": "SetA-FindtheDuplicateNumber.js",
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliPri/Sorting-Algorithm.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitaliPri/Sorting-Algorithm/issues"
+  },
+  "homepage": "https://github.com/VitaliPri/Sorting-Algorithm#readme",
   "devDependencies": {
     "jest": "^29.6.1"
   }
