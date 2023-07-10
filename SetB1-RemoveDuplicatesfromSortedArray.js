@@ -49,3 +49,8 @@ class Node {
 
     return nums.length; 
   }
+
+  module.exports = {
+    RemoveDuplicates,
+    Node
+  };

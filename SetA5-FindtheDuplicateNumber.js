@@ -27,6 +27,8 @@ function FindDuplicateNum(nums){
 
         }
     }
+    // there is no duplicates
+    return null; 
 }
 
 module.exports = FindDuplicateNum;

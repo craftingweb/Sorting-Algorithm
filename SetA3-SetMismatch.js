@@ -26,7 +26,11 @@ function SetMismatch(nums)
             }
 
         }
+  
     }
+
+    //if there is no mismatch 
+    return null;
 }
 
 module.exports = SetMismatch; 
