@@ -11,41 +11,34 @@
 
 //using pointers cause you cant use cyclic search with negative integers 
 
-class Node {
-    constructor(value, next=null) {
-      this.value = value;
-      this.next = next;
-    }
-  }
-
-
-  function RemoveDuplicates(nums)
+function RemoveDuplicates(nums)
+{
+  //if the array is empty return null
+  if(nums.length === 0)
   {
-    //setting our pointers to the start of array 
-    let fast = head;
-    let slow = head; 
-
-    //while not at the end, or 1 cycle has completed
-    while((fast !== null && fast.next !== null) || (fast === slow))
-    {
-        //updating pointers
-        slow = slow.next;
-        fast = fast.next.next;
-
-        i = 1; 
-        i++; 
-
-        //fast should be equal to slow + 2 ,, if its not then there is a duplicate
-        if(fast.value != (slow.value + i))
-        {
-            //we want to remove the duplicate
-            //remove inbetween fast and slow and move on 
-            nums = nums.splice((fast.value - 1), 1);
-            
-        }
-
-    
-    }
-
-    return nums.length; 
+    return null; 
   }
+
+  //updating pointers
+  unique= 1;
+
+
+  //going through the size of the whole array 
+  for(let currentIndex =0 ; currentIndex < nums.length - 1; currentIndex++)
+  {
+    //if the current index val is not equal to the next val , then there is not a duplicate and you can move on
+    if(nums[currentIndex] !== nums[currentIndex+1])
+    {
+      //adding the new val to the "unique array" by setting the index of the next unique place to the new unique character
+      nums[unique] = nums[currentIndex+1]
+
+      //moving up the spot where the next unique index will go 
+      unique++
+    }
+  }
+
+  //after going through the whole array, this is the num of all unique indexed we counted and tracked 
+  return unique; 
+}
+
+module.exports = RemoveDuplicates; 

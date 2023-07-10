@@ -11,7 +11,7 @@
 function FindDuplicateNum(nums){
     for(let currentIndex = 0; currentIndex < nums.length; currentIndex++)
     {
-        const value = nums[i]; 
+        const value = nums[currentIndex]; 
         const correctIndex = value - 1; 
 
         //if current val is not in correct index
@@ -27,4 +27,8 @@ function FindDuplicateNum(nums){
 
         }
     }
+    // there is no duplicates
+    return null; 
 }
+
+module.exports = FindDuplicateNum;
