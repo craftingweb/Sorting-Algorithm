@@ -8,6 +8,6 @@ test('SetMismatch([1,2,3,3] returns [3,4]', () =>{
     expect(SetMismatch([1,2,3,3])).toStrictEqual([3,4]);
 })
 
-test('SetMismatch([1,2,3,4] returns null', () =>{
+test('Returns null if theres no mismatch', () =>{
     expect(SetMismatch([1,2,3,4])).toBe(null);
 })

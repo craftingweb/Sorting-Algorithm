@@ -11,36 +11,32 @@
 
 //using pointers cause you cant use cyclic search with negative integers 
 
-class Node {
-    constructor(value, next=null) {
-      this.value = value;
-      this.next = next;
-    }
-  }
+// class Node {
+//     constructor(value, next=null) {
+//       this.value = value;
+//       this.next = next;
+//     }
+//   }
 
 
   function RemoveDuplicates(nums)
   {
     //setting our pointers to the start of array 
-    let fast = head;
-    let slow = head; 
+    let fast = 0;
+    let slow = 0; 
 
-    //while not at the end, or 1 cycle has completed
-    while((fast !== null && fast.next !== null) || (fast === slow))
+    //while not at the end of array 
+    while(fast < nums.length)
     {
         //updating pointers
-        slow = slow.next;
-        fast = fast.next.next;
+        slow ++;
+        fast += 2;
 
-        i = 1; 
-        i++; 
-
-        //fast should be equal to slow + 2 ,, if its not then there is a duplicate
-        if(fast.value != (slow.value + i))
+        //fast should be equal to slow * 2 ,, if its not then there is a duplicate
+        if(nums[fast] != (nums[slow] * 2))
         {
-            //we want to remove the duplicate
-            //remove inbetween fast and slow and move on 
-            nums = nums.splice((fast.value - 1), 1);
+            //we want to remove the duplicate 
+            nums = nums.splice((fast+ 1), 1);
             
         }
 
@@ -52,5 +48,4 @@ class Node {
 
   module.exports = {
     RemoveDuplicates,
-    Node
   };

@@ -17,7 +17,7 @@ function SetMismatch(nums)
         //if current val is not in correct index
         if(currentIndex != correctIndex)
         {
-            //if the number already at the correct index m
+            //if the number already at the correct index 
             //matches the one that needs to be swapped,,
             // there is a duplicate
             if(nums[currentIndex] === nums[correctIndex])
@@ -29,7 +29,7 @@ function SetMismatch(nums)
   
     }
 
-    //if there is no mismatch 
+    //if there is no mismatch because we have gone through the whole array
     return null;
 }
 
